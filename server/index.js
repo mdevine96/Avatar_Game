@@ -1,16 +1,12 @@
 import express from 'express';
 import cors from 'cors';
+import gameRouter from './routes/game.js';
 
 const app = express();
-
-// Enable CORS for frontend
 app.use(cors({ origin: '*' }));
+app.use(express.json()); // IMPORTANT for POST JSON bodies
 
-// Parse JSON bodies
-app.use(express.json());
-
-// Routes
-import gameRouter from './routes/game.js';
+// Mount the router at /api
 app.use('/api', gameRouter);
 
 // Health check
