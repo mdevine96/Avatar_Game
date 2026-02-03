@@ -1,6 +1,6 @@
 import express from 'express';
 import { supabase } from '../supabaseClient.js';
-import { getDailyAnswerId } from '../utils/dailyAnswer.js';
+import { getDailyAnswerId } from '../utils/daily-answer.js';
 import { compare } from '../utils/compare.js';
 
 const router = express.Router();
