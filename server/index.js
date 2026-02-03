@@ -3,10 +3,14 @@ import cors from 'cors';
 import gameRouter from './routes/game.js';
 
 const app = express();
-app.use(cors({ origin: '*' }));
-app.use(express.json()); // IMPORTANT for POST JSON bodies
 
-// Mount the router at /api
+// Enable CORS so frontend can talk to backend
+app.use(cors({ origin: '*' }));
+
+// Parse JSON bodies
+app.use(express.json());
+
+// Mount API router at /api
 app.use('/api', gameRouter);
 
 // Health check

@@ -1,8 +1,7 @@
-// client/src/api.js
 const API_BASE = import.meta.env.VITE_API_URL;
 
 if (!API_BASE) {
-  console.error('VITE_API_URL is not set! Make sure you set it in Render or .env.local');
+  console.error('VITE_API_URL not set! Make sure it is set in Render or .env.local');
 }
 
 export async function submitGuess(guessId) {

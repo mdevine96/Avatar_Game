@@ -4,7 +4,7 @@ import { submitGuess } from './api';
 export default function App() {
   const handleTestGuess = async () => {
     try {
-      // Replace '1' with any valid guess ID for testing
+      // Use 1 as a test guessId
       const result = await submitGuess(1);
       alert(`Guess result: ${JSON.stringify(result)}`);
     } catch (err) {
