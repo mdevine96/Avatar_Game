@@ -1,0 +1,22 @@
+.app {
+  max-width: 600px;
+  margin: auto;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.tile {
+  padding: 12px;
+  text-align: center;
+  border-radius: 4px;
+  color: white;
+}
+
+.correct { background: #6aaa64; }
+.wrong   { background: #787c7e; }
+.none    { background: #3a3a3c; }
